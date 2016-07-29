@@ -13,5 +13,12 @@ namespace ChatTest.Hubs
             // Call the addNewMessageToPage method to update clients.
             Clients.All.addNewMessageToPage(name, message);
         }
+
+        public void Send(string destination,string name, string message)
+        {
+            //if(destination =="client1")
+            // Call the addNewMessageToPage method to update clients.
+                Clients.User(destination).getMessage(name, message);
+        }
     }
 }
